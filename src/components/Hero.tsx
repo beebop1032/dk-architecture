@@ -14,19 +14,6 @@ export function Hero() {
         sizes="100vw"
       />
 
-      {/* Architectural blueprint overlay — right half, fades out toward the left */}
-      <div
-        className="absolute right-0 top-0 h-full pointer-events-none hidden md:block"
-        style={{
-          width: '62%',
-          opacity: 0.15,
-          maskImage: 'linear-gradient(to right, transparent 0%, white 28%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, white 28%)',
-        }}
-      >
-        <HeroBlueprint />
-      </div>
-
       {/* Gradient overlay — transparent at top, deep at bottom for text legibility */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -35,6 +22,27 @@ export function Hero() {
             'linear-gradient(to top, rgba(14,14,11,0.92) 0%, rgba(14,14,11,0.55) 45%, rgba(14,14,11,0.18) 75%, rgba(14,14,11,0.08) 100%)',
         }}
       />
+
+      {/* Dark scrim on right side — creates contrast for blueprint lines */}
+      <div
+        className="absolute inset-0 pointer-events-none hidden md:block"
+        style={{
+          background: 'linear-gradient(to left, rgba(14,14,11,0.62) 0%, rgba(14,14,11,0.28) 45%, transparent 65%)',
+        }}
+      />
+
+      {/* Architectural blueprint overlay — right half, fades out toward the left */}
+      <div
+        className="absolute right-0 top-0 h-full pointer-events-none hidden md:block"
+        style={{
+          width: '62%',
+          opacity: 0.28,
+          maskImage: 'linear-gradient(to right, transparent 0%, white 22%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, white 22%)',
+        }}
+      >
+        <HeroBlueprint />
+      </div>
 
       {/* Content anchored to bottom */}
       <div className="relative z-10 w-full max-w-site mx-auto px-6 pb-24 pt-40">
