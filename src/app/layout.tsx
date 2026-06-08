@@ -50,6 +50,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${cinzel.variable} ${josefinSans.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
