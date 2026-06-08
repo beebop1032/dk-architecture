@@ -43,16 +43,16 @@ export function ContactForm() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="nom" className="block text-xs text-[#cfccc4] mb-1.5">Nom *</label>
-          <input id="nom" name="nom" required className={inputCls} />
+          <input id="nom" name="nom" required autoComplete="name" className={inputCls} />
         </div>
         <div>
           <label htmlFor="tel" className="block text-xs text-[#cfccc4] mb-1.5">Téléphone</label>
-          <input id="tel" name="telephone" type="tel" className={inputCls} />
+          <input id="tel" name="telephone" type="tel" autoComplete="tel" className={inputCls} />
         </div>
       </div>
       <div>
         <label htmlFor="email" className="block text-xs text-[#cfccc4] mb-1.5">Email *</label>
-        <input id="email" name="email" type="email" required className={inputCls} />
+        <input id="email" name="email" type="email" required autoComplete="email" className={inputCls} />
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>

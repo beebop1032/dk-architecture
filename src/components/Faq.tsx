@@ -42,9 +42,11 @@ export function Faq() {
           {faqs.map((f, i) => (
             <div key={i} className="border border-line rounded bg-white overflow-hidden">
               <button
-                className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 cursor-pointer hover:bg-paper transition"
+                className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 cursor-pointer hover:bg-paper transition touch-manipulation"
                 onClick={() => setOpen(open === i ? null : i)}
                 aria-expanded={open === i}
+                aria-controls={`faq-panel-${i}`}
+                id={`faq-btn-${i}`}
               >
                 <span className="font-semibold text-ink text-[0.97rem] leading-snug">{f.q}</span>
                 <svg
@@ -56,7 +58,12 @@ export function Faq() {
                 </svg>
               </button>
               {open === i && (
-                <div className="px-6 pb-5 text-[0.94rem] text-ink-soft leading-relaxed border-t border-line pt-4">
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-btn-${i}`}
+                  className="px-6 pb-5 text-[0.94rem] text-ink-soft leading-relaxed border-t border-line pt-4"
+                >
                   {f.a}
                 </div>
               )}
