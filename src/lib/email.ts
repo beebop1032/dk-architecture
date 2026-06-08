@@ -1,6 +1,8 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend(): Resend {
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 export async function sendContactEmail(data: {
   nom: string
@@ -10,6 +12,7 @@ export async function sendContactEmail(data: {
   budget?: string
   message?: string
 }): Promise<void> {
+  const resend = getResend()
   await resend.emails.send({
     from: 'DK Architecture <noreply@dkarchitecture.be>',
     to: 'fk@dkarchitecture.be',
