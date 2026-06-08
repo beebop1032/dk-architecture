@@ -55,11 +55,11 @@ export function Hero() {
             className="text-white max-w-[20ch] mb-5 leading-[1.1]"
             style={{ fontSize: 'clamp(2.6rem, 5.2vw, 4.4rem)' }}
           >
-            Architecte à Chastre et Gembloux — construire ou rénover en Brabant wallon
+            Architecte à Chastre, Walhain et Gembloux — construire, rénover, construire durable
           </h1>
           <p className="text-white/72 max-w-[52ch] mb-8 leading-relaxed" style={{ fontSize: '1.05rem' }}>
-            Des maisons qui vous ressemblent — volumes nets, lumière naturelle, matériaux nobles,
-            conçus dans les moindres détails pour votre façon de vivre et votre budget.
+            Des maisons qui vous ressemblent — volumes nets, lumière naturelle, matériaux nobles et biosourcés.
+            Construction neuve, rénovation, ossature bois, paille, maison passive : conçu pour votre façon de vivre et votre budget.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a

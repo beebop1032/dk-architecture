@@ -17,12 +17,16 @@ const faqs = [
     a: "En Brabant wallon, le délai légal d'instruction d'un permis d'urbanisme est de 60 jours pour les dossiers simples (urbanisme ordinaire) et de 115 jours pour les dossiers complexes soumis à enquête publique. Ce délai court à compter du dépôt du dossier complet. Un dossier bien préparé et conforme aux règles urbanistiques locales évite les demandes de pièces complémentaires, qui suspendent ce délai.",
   },
   {
-    q: "François Kerremans travaille-t-il uniquement à Chastre et Gembloux ?",
-    a: "Non — François Kerremans est basé à Chastre (Villeroux-Blanmont) et intervient principalement sur l'axe Chastre–Gembloux, mais aussi dans l'ensemble du Brabant wallon : Wavre, Ottignies-Louvain-la-Neuve, Perwez, Court-Saint-Étienne, et au-delà sur des projets qui le justifient. N'hésitez pas à nous contacter pour discuter de votre situation.",
+    q: "Dans quelles communes François Kerremans intervient-il ?",
+    a: "François Kerremans est basé à Chastre (Villeroux-Blanmont) et intervient en priorité dans les communes voisines : Walhain (Saint-Géry, Tourinnes-Saint-Lambert), Gembloux (Ernage, Grand-Leez, Les Isnes, Beuzet, Lonzée), Perwez, Sombreffe, Court-Saint-Étienne, Nil-Saint-Vincent-Saint-Martin, ainsi que dans l'ensemble du Brabant wallon — Wavre, Ottignies-Louvain-la-Neuve, Villers-la-Ville — et au-delà selon les projets.",
   },
   {
-    q: "Proposez-vous des constructions biosourcées (paille, bois, chanvre) ?",
-    a: "Oui. François Kerremans a une expérience concrète dans les constructions biosourcées : ossature bois, isolation paille, fibre de bois. Ces techniques répondent à la fois aux exigences de performance énergétique actuelles (PEB) et à une démarche environnementale. Elles peuvent être intégrées aussi bien dans une construction neuve que dans une rénovation, selon les contraintes du projet et le budget.",
+    q: "Proposez-vous des constructions biosourcées et éco-responsables ?",
+    a: "Oui — c'est même une spécialité. François Kerremans maîtrise les constructions en ossature bois, isolation en bottes de paille, fibre de bois et chanvre. Ces techniques permettent d'atteindre des niveaux PEB A, maison passive (quasi zéro énergie) ou BBC tout en réduisant significativement l'empreinte carbone du bâtiment. Elles s'appliquent aussi bien à une construction neuve qu'à une rénovation profonde, et s'adaptent à tous les budgets. Le surcoût par rapport au traditionnel est souvent compensé par les économies d'énergie sur le long terme.",
+  },
+  {
+    q: "Qu'est-ce qu'une maison passive et est-ce adapté en Brabant wallon ?",
+    a: "Une maison passive est une construction qui minimise ses besoins en chauffage et en climatisation grâce à une isolation poussée, une étanchéité à l'air irréprochable, des vitrages performants et une ventilation double flux avec récupération de chaleur. En Brabant wallon, le climat tempéré s'y prête parfaitement : les maisons passives y sont particulièrement efficaces et confortables. Elles peuvent bénéficier de primes énergie en Région wallonne et permettent une quasi-indépendance énergétique.",
   },
 ]
 

@@ -1,7 +1,7 @@
 const services = [
   {
     title: 'Construction neuve',
-    desc: "Conception de maisons et bâtiments sur mesure, du concept au permis d'urbanisme jusqu'au suivi de chantier.",
+    desc: "Conception de maisons sur mesure à Chastre, Walhain, Gembloux et alentours — du premier croquis au permis d'urbanisme et au suivi de chantier.",
     tag: 'Mission complète',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -11,7 +11,7 @@ const services = [
   },
   {
     title: 'Rénovation & extension',
-    desc: 'Rénovations, transformations et extensions qui valorisent votre bien — avec des matériaux sains et biosourcés.',
+    desc: "Transformation, rénovation énergétique et extension de votre habitation — avec des matériaux sains, biosourcés et adaptés aux exigences PEB.",
     tag: 'Cœur de métier',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -20,18 +20,18 @@ const services = [
     ),
   },
   {
-    title: 'Conseil & expertise',
-    desc: 'Étude de faisabilité, avis technique, expertise immobilière et accompagnement de promoteurs.',
-    tag: 'Sur mesure',
+    title: 'Construction écologique',
+    desc: "Ossature bois, isolation paille, maison passive ou BBC : des techniques éprouvées pour un confort durable, une empreinte carbone réduite et des charges maîtrisées.",
+    tag: 'Biosourcé & passif',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M12 3a9 9 0 109 9M12 3v9l6 3M12 3a9 9 0 018 5" />
+        <path d="M12 2a10 10 0 000 20M12 2C6.48 2 2 6.48 2 12M12 2c2 4 3 8 0 10s-3 6 0 10M2 12h20" />
       </svg>
     ),
   },
   {
     title: 'Permis & suivi de chantier',
-    desc: "Constitution des dossiers de permis d'urbanisme et contrôle de l'exécution jusqu'à la réception des travaux.",
+    desc: "Constitution des dossiers de permis d'urbanisme en Brabant wallon et contrôle de l'exécution jusqu'à la réception des travaux.",
     tag: 'Tranquillité',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -49,8 +49,8 @@ export function Services() {
       <div className="max-w-site mx-auto px-6">
         <div className="max-w-[640px] mb-12">
           <p className="eyebrow">Ce que nous faisons</p>
-          <h2>Architecte à Chastre et Gembloux — missions complètes, du premier croquis aux clés</h2>
-          <p className="mt-3.5 text-[1.05rem] text-ink-soft">De la conception au suivi de chantier, je prends en charge l&apos;ensemble de votre projet en Brabant wallon, avec une attention constante aux matériaux durables et au confort de vie.</p>
+          <h2>Architecte à Chastre, Walhain, Gembloux — missions complètes, du premier croquis aux clés</h2>
+          <p className="mt-3.5 text-[1.05rem] text-ink-soft">De la conception au suivi de chantier, je prends en charge l&apos;ensemble de votre projet à Chastre, Walhain, Gembloux, Perwez et dans tout le Brabant wallon — avec une attention constante aux matériaux durables, aux solutions biosourcées et au confort de vie.</p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => (

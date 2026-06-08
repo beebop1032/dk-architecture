@@ -1,7 +1,7 @@
 const stats = [
-  { n: 'Brabant wallon', l: '& alentours' },
-  { n: 'Contemporain', l: 'maisons & extensions' },
-  { n: 'Biosourcé', l: 'bois, paille, fibre' },
+  { n: 'Chastre · Walhain', l: 'Gembloux · Perwez · Wavre' },
+  { n: 'Éco-responsable', l: 'paille, bois, passif, BBC' },
+  { n: 'Biosourcé', l: 'matériaux sains & naturels' },
   { n: 'Devis gratuit', l: 'premier rendez-vous' },
 ]
 
