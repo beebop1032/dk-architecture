@@ -1,5 +1,20 @@
 import type { Metadata } from 'next'
+import { Cinzel, Josefin_Sans } from 'next/font/google'
 import './globals.css'
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-cinzel',
+  weight: ['400', '500', '600', '700'],
+})
+
+const josefinSans = Josefin_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-josefin',
+  weight: ['300', '400', '500', '600', '700'],
+})
 
 const SITE_URL = 'https://www.dkarchitecture.be'
 
@@ -33,11 +48,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${cinzel.variable} ${josefinSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
