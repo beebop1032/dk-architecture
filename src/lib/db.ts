@@ -31,7 +31,7 @@ export async function saveSubmission(data: {
     message: data.message ?? null,
   }
   await put(`submissions/${id}.json`, JSON.stringify(submission), {
-    access: 'public',
+    access: 'private',
     contentType: 'application/json',
     storeId: process.env.BLOB_STORE_ID,
   })
@@ -42,7 +42,9 @@ export async function getSubmissions(): Promise<Submission[]> {
   if (blobs.length === 0) return []
   const submissions = await Promise.all(
     blobs.map(async (blob) => {
-      const res = await fetch(blob.url)
+      const res = await fetch(blob.url, {
+        headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
+      })
       return res.json() as Promise<Submission>
     })
   )
