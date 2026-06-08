@@ -1,3 +1,5 @@
+import { MotionWrapper } from './MotionWrapper'
+
 const quotes = [
   { text: '"Un accompagnement du début à la fin. Notre rénovation est restée dans le budget et le résultat dépasse nos attentes."', who: '— Famille D., Chastre' },
   { text: '"Réactif et de bon conseil à chaque étape. Le dossier de permis a été géré sans le moindre stress de notre côté."', who: '— Marc V., Gembloux' },
@@ -14,11 +16,13 @@ export function Testimonials() {
         </div>
         <div className="grid grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
           {quotes.map((q, i) => (
-            <div key={i} className="bg-white border border-line rounded p-7">
-              <div className="text-accent tracking-widest mb-3.5">★★★★★</div>
-              <p className="text-ink mb-4">{q.text}</p>
-              <p className="text-[0.85rem] text-ink-soft font-semibold">{q.who}</p>
-            </div>
+            <MotionWrapper key={i} delay={i * 0.1}>
+              <div className="bg-white border border-line rounded p-7">
+                <div className="text-accent tracking-widest mb-3.5">★★★★★</div>
+                <p className="text-ink mb-4">{q.text}</p>
+                <p className="text-[0.85rem] text-ink-soft font-semibold">{q.who}</p>
+              </div>
+            </MotionWrapper>
           ))}
         </div>
       </div>

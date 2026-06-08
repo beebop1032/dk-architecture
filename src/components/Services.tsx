@@ -41,6 +41,8 @@ const services = [
   },
 ]
 
+import { MotionWrapper } from './MotionWrapper'
+
 export function Services() {
   return (
     <section id="services" className="py-20">
@@ -51,15 +53,17 @@ export function Services() {
           <p className="mt-3.5 text-[1.05rem] text-ink-soft">De la conception au suivi de chantier, je prends en charge l&apos;ensemble de votre projet, avec une attention constante aux matériaux durables et au confort de vie.</p>
         </div>
         <div className="grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
-          {services.map(s => (
-            <div key={s.title} className="bg-white border border-line rounded p-7 hover:-translate-y-1 hover:shadow-lg transition">
-              <div className="w-11 h-11 rounded bg-paper-2 flex items-center justify-center mb-4 text-accent-dark">
-                {s.icon}
+          {services.map((s, i) => (
+            <MotionWrapper key={s.title} delay={i * 0.08}>
+              <div className="bg-white border border-line rounded p-7 hover:-translate-y-1 hover:shadow-lg transition">
+                <div className="w-11 h-11 rounded bg-paper-2 flex items-center justify-center mb-4 text-accent-dark">
+                  {s.icon}
+                </div>
+                <h3 className="mb-2.5">{s.title}</h3>
+                <p className="text-[0.94rem] text-ink-soft">{s.desc}</p>
+                <span className="inline-block mt-3.5 text-[0.72rem] font-bold uppercase tracking-widest text-accent-dark bg-paper-2 px-2.5 py-1 rounded-full">{s.tag}</span>
               </div>
-              <h3 className="mb-2.5">{s.title}</h3>
-              <p className="text-[0.94rem] text-ink-soft">{s.desc}</p>
-              <span className="inline-block mt-3.5 text-[0.72rem] font-bold uppercase tracking-widest text-accent-dark bg-paper-2 px-2.5 py-1 rounded-full">{s.tag}</span>
-            </div>
+            </MotionWrapper>
           ))}
         </div>
       </div>

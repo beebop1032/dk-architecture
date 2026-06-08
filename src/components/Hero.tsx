@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import { MotionWrapper } from './MotionWrapper'
 
 export function Hero() {
   return (
     <section className="py-[90px] pb-20 overflow-hidden">
       <div className="max-w-site mx-auto px-6 grid grid-cols-[1.05fr_0.95fr] gap-14 items-center md:grid-cols-1 md:gap-10">
-        <div>
+        <MotionWrapper>
           <p className="eyebrow">Bureau d&apos;architecture · Chastre, Brabant wallon</p>
           <h1>Construire ou rénover, avec un architecte qui pense aussi à votre budget.</h1>
           <p className="text-[1.18rem] text-ink-soft mt-5 mb-8 max-w-[46ch]">
@@ -18,7 +19,7 @@ export function Hero() {
               Voir les réalisations
             </a>
           </div>
-        </div>
+        </MotionWrapper>
         <div className="aspect-[4/5] rounded overflow-hidden border border-line relative">
           <Image
             src="/photos/realisation-bw/480598400_1139028217915102_2980188089996647331_n.jpg"
