@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import type { Photo } from '@/data/projects'
 
@@ -31,15 +31,15 @@ export function Lightbox({ photos, currentIndex, onClose, onPrev, onNext }: Ligh
     }
   }, [handleKey])
 
-  let startX = 0
+  const startXRef = useRef(0)
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/85"
       onClick={onClose}
-      onPointerDown={e => { startX = e.clientX }}
+      onPointerDown={e => { startXRef.current = e.clientX }}
       onPointerUp={e => {
-        const diff = e.clientX - startX
+        const diff = e.clientX - startXRef.current
         if (diff > 60) onPrev()
         if (diff < -60) onNext()
       }}

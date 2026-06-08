@@ -8,7 +8,7 @@ const stats = [
 export function TrustBar() {
   return (
     <div className="border-t border-b border-line bg-paper-2">
-      <div className="max-w-site mx-auto px-6 flex flex-wrap gap-x-12 gap-y-4 justify-between py-6 sm:flex-col">
+      <div className="max-w-site mx-auto px-6 flex flex-wrap gap-x-12 gap-y-4 justify-between py-6">
         {stats.map(s => (
           <div key={s.n}>
             <div className="text-[1.9rem] font-bold text-ink">{s.n}</div>

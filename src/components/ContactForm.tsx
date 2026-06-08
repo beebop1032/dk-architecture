@@ -40,7 +40,7 @@ export function ContactForm() {
       {state?.error && (
         <div className="bg-red-900/40 border border-red-700 text-red-200 p-3 rounded text-sm">{state.error}</div>
       )}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-1">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="nom" className="block text-xs text-[#cfccc4] mb-1.5">Nom *</label>
           <input id="nom" name="nom" required className={inputCls} />
@@ -54,7 +54,7 @@ export function ContactForm() {
         <label htmlFor="email" className="block text-xs text-[#cfccc4] mb-1.5">Email *</label>
         <input id="email" name="email" type="email" required className={inputCls} />
       </div>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-1">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="type" className="block text-xs text-[#cfccc4] mb-1.5">Type de projet</label>
           <select id="type" name="type" className={inputCls}>

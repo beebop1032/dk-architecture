@@ -15,7 +15,7 @@ export function Process() {
           <p className="eyebrow">Notre démarche</p>
           <h2>Un accompagnement clair, du premier rendez-vous aux clés</h2>
         </div>
-        <div className="grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <MotionWrapper key={s.title} delay={i * 0.1}>
               <div className="pt-6 border-t-2 border-ink">

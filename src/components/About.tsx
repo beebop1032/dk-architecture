@@ -4,7 +4,7 @@ import { MotionWrapper } from './MotionWrapper'
 export function About() {
   return (
     <section id="apropos" className="py-20 bg-paper-2">
-      <div className="max-w-site mx-auto px-6 grid grid-cols-[0.9fr_1.1fr] gap-14 items-center md:grid-cols-1 md:gap-10">
+      <div className="max-w-site mx-auto px-6 grid grid-cols-1 gap-10 items-center lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <div className="aspect-square rounded overflow-hidden border border-line relative">
           <Image
             src="/photos/realisation-bw/480812628_1139028191248438_2690905198993266196_n.jpg"

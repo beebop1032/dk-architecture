@@ -14,7 +14,7 @@ export function Testimonials() {
           <p className="eyebrow">Ils nous ont fait confiance</p>
           <h2>Ce que disent nos clients</h2>
         </div>
-        <div className="grid grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {quotes.map((q, i) => (
             <MotionWrapper key={i} delay={i * 0.1}>
               <div className="bg-white border border-line rounded p-7">

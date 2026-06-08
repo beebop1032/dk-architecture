@@ -4,7 +4,7 @@ import { MotionWrapper } from './MotionWrapper'
 export function Hero() {
   return (
     <section className="py-[90px] pb-20 overflow-hidden">
-      <div className="max-w-site mx-auto px-6 grid grid-cols-[1.05fr_0.95fr] gap-14 items-center md:grid-cols-1 md:gap-10">
+      <div className="max-w-site mx-auto px-6 grid grid-cols-1 gap-10 items-center lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <MotionWrapper>
           <p className="eyebrow">Bureau d&apos;architecture · Chastre, Brabant wallon</p>
           <h1>Construire ou rénover, avec un architecte qui pense aussi à votre budget.</h1>

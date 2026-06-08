@@ -10,7 +10,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 bg-ink text-[#eee]">
-      <div className="max-w-site mx-auto px-6 grid grid-cols-2 gap-14 md:grid-cols-1 md:gap-10">
+      <div className="max-w-site mx-auto px-6 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
           <p className="eyebrow" style={{ color: '#c9ad84' }}>Demander un devis</p>
           <h2 className="text-white">Parlons de votre projet</h2>

@@ -24,7 +24,7 @@ export function Portfolio() {
             <p className="mt-3.5 text-[1.05rem] text-ink-soft">Chaque projet est unique. Voici quelques réalisations représentatives de mon travail en Brabant wallon.</p>
           </div>
         </MotionWrapper>
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <div
               key={p.slug}
