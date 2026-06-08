@@ -16,7 +16,8 @@ export async function POST(req: NextRequest) {
       saveSubmission({ nom, email, telephone, type_projet, budget, message }),
     ])
     return NextResponse.json({ success: true })
-  } catch {
+  } catch (err) {
+    console.error('[contact] error:', err)
     return NextResponse.json({ error: 'Une erreur est survenue. Veuillez réessayer.' }, { status: 500 })
   }
 }
