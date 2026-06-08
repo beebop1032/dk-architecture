@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { MotionWrapper } from './MotionWrapper'
+import { HeroBlueprint } from './HeroBlueprint'
 
 export function Hero() {
   return (
@@ -12,6 +13,19 @@ export function Hero() {
         className="object-cover object-[center_45%]"
         sizes="100vw"
       />
+
+      {/* Architectural blueprint overlay — right half, fades out toward the left */}
+      <div
+        className="absolute right-0 top-0 h-full pointer-events-none hidden md:block"
+        style={{
+          width: '62%',
+          opacity: 0.15,
+          maskImage: 'linear-gradient(to right, transparent 0%, white 28%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, white 28%)',
+        }}
+      >
+        <HeroBlueprint />
+      </div>
 
       {/* Gradient overlay — transparent at top, deep at bottom for text legibility */}
       <div
