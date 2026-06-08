@@ -1,13 +1,11 @@
 import { redirect } from 'next/navigation'
 import { getSubmissions } from '@/lib/db'
 import { clearAdminCookie } from '@/lib/auth'
-import { toggleReadAction } from './actions'
 
 export const dynamic = 'force-dynamic'
 
 export default async function AdminPage() {
   const submissions = await getSubmissions()
-  const unread = submissions.filter(s => !s.lu).length
 
   async function logout() {
     'use server'
@@ -21,9 +19,7 @@ export default async function AdminPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-semibold text-ink">Demandes de contact</h1>
-            {unread > 0 && (
-              <p className="text-sm text-accent-dark font-semibold mt-1">{unread} nouvelle{unread > 1 ? 's' : ''} demande{unread > 1 ? 's' : ''}</p>
-            )}
+            <p className="text-sm text-ink-soft mt-1">{submissions.length} demande{submissions.length !== 1 ? 's' : ''}</p>
           </div>
           <form action={logout}>
             <button type="submit" className="text-sm text-ink-soft hover:text-ink border border-line px-4 py-2 rounded transition cursor-pointer">
@@ -37,10 +33,9 @@ export default async function AdminPage() {
         ) : (
           <div className="grid gap-3">
             {submissions.map(s => (
-              <details key={s.id} className={`border rounded p-4 ${s.lu ? 'border-line bg-white' : 'border-accent-dark/30 bg-accent/5'}`}>
+              <details key={s.id} className="border border-line rounded p-4 bg-white">
                 <summary className="cursor-pointer flex items-center justify-between gap-4 list-none">
                   <div className="flex items-center gap-3 min-w-0">
-                    {!s.lu && <span className="w-2 h-2 rounded-full bg-accent-dark flex-none" />}
                     <span className="font-semibold text-ink text-sm truncate">{s.nom}</span>
                     <span className="text-ink-soft text-sm truncate">{s.email}</span>
                     <span className="text-ink-soft text-xs hidden sm:block">{s.type_projet}</span>
@@ -53,11 +48,6 @@ export default async function AdminPage() {
                   {s.telephone && <p><strong>Téléphone :</strong> <a href={`tel:${s.telephone}`} className="text-accent-dark">{s.telephone}</a></p>}
                   {s.budget && <p><strong>Budget :</strong> {s.budget}</p>}
                   {s.message && <p><strong>Message :</strong><br /><span className="text-ink-soft whitespace-pre-wrap">{s.message}</span></p>}
-                  <form action={toggleReadAction.bind(null, s.id, !s.lu)} className="mt-2">
-                    <button type="submit" className="text-xs text-ink-soft hover:text-ink border border-line px-3 py-1.5 rounded transition cursor-pointer">
-                      {s.lu ? 'Marquer non lu' : 'Marquer comme lu'}
-                    </button>
-                  </form>
                 </div>
               </details>
             ))}

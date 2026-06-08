@@ -1,7 +1,7 @@
-import { sql } from '@vercel/postgres'
+import { put, list } from '@vercel/blob'
 
 export interface Submission {
-  id: number
+  id: string
   created_at: string
   nom: string
   email: string
@@ -9,7 +9,6 @@ export interface Submission {
   type_projet: string | null
   budget: string | null
   message: string | null
-  lu: boolean
 }
 
 export async function saveSubmission(data: {
@@ -20,18 +19,33 @@ export async function saveSubmission(data: {
   budget?: string
   message?: string
 }): Promise<void> {
-  await sql`
-    INSERT INTO submissions (nom, email, telephone, type_projet, budget, message)
-    VALUES (${data.nom}, ${data.email}, ${data.telephone ?? null},
-            ${data.type_projet ?? null}, ${data.budget ?? null}, ${data.message ?? null})
-  `
+  const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
+  const submission: Submission = {
+    id,
+    created_at: new Date().toISOString(),
+    nom: data.nom,
+    email: data.email,
+    telephone: data.telephone ?? null,
+    type_projet: data.type_projet ?? null,
+    budget: data.budget ?? null,
+    message: data.message ?? null,
+  }
+  await put(`submissions/${id}.json`, JSON.stringify(submission), {
+    access: 'public',
+    contentType: 'application/json',
+  })
 }
 
 export async function getSubmissions(): Promise<Submission[]> {
-  const result = await sql<Submission>`SELECT * FROM submissions ORDER BY created_at DESC`
-  return result.rows
-}
-
-export async function markAsRead(id: number, lu: boolean): Promise<void> {
-  await sql`UPDATE submissions SET lu = ${lu} WHERE id = ${id}`
+  const { blobs } = await list({ prefix: 'submissions/' })
+  if (blobs.length === 0) return []
+  const submissions = await Promise.all(
+    blobs.map(async (blob) => {
+      const res = await fetch(blob.url)
+      return res.json() as Promise<Submission>
+    })
+  )
+  return submissions.sort(
+    (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+  )
 }
