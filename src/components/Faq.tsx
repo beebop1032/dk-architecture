@@ -10,15 +10,15 @@ const faqs = [
   },
   {
     q: "Combien coûtent les honoraires d'un architecte en Brabant wallon ?",
-    a: "Les honoraires d'un architecte en Belgique varient selon la mission confiée et la complexité du projet. Ils représentent généralement entre 8 % et 12 % du coût total des travaux pour une mission complète (conception + permis + suivi de chantier). Pour une mission partielle — permis d'urbanisme uniquement ou suivi de chantier seul — la facturation est souvent forfaitaire. Le premier rendez-vous chez DK architecture est gratuit et sans engagement.",
+    a: "Les honoraires d'un architecte en Belgique varient selon la mission confiée et la complexité du projet. Ils représentent généralement entre 8 % et 12 % du coût total des travaux pour une mission complète (conception + permis + suivi de chantier). Pour une mission partielle — permis d'urbanisme uniquement ou suivi de chantier seul — la facturation est souvent forfaitaire. Le premier rendez-vous est gratuit et sans engagement.",
   },
   {
     q: "Quel est le délai pour obtenir un permis d'urbanisme en Brabant wallon ?",
     a: "En Brabant wallon, le délai légal d'instruction d'un permis d'urbanisme est de 60 jours pour les dossiers simples (urbanisme ordinaire) et de 115 jours pour les dossiers complexes soumis à enquête publique. Ce délai court à compter du dépôt du dossier complet. Un dossier bien préparé et conforme aux règles urbanistiques locales évite les demandes de pièces complémentaires, qui suspendent ce délai.",
   },
   {
-    q: "DK architecture travaille-t-il uniquement à Chastre et Gembloux ?",
-    a: "Non — le bureau DK architecture est basé à Chastre (Villeroux-Blanmont) et intervient principalement sur l'axe Chastre–Gembloux, mais aussi dans l'ensemble du Brabant wallon : Wavre, Ottignies-Louvain-la-Neuve, Perwez, Court-Saint-Étienne, et au-delà sur des projets qui le justifient. N'hésitez pas à nous contacter pour discuter de votre situation.",
+    q: "François Kerremans travaille-t-il uniquement à Chastre et Gembloux ?",
+    a: "Non — François Kerremans est basé à Chastre (Villeroux-Blanmont) et intervient principalement sur l'axe Chastre–Gembloux, mais aussi dans l'ensemble du Brabant wallon : Wavre, Ottignies-Louvain-la-Neuve, Perwez, Court-Saint-Étienne, et au-delà sur des projets qui le justifient. N'hésitez pas à nous contacter pour discuter de votre situation.",
   },
   {
     q: "Proposez-vous des constructions biosourcées (paille, bois, chanvre) ?",

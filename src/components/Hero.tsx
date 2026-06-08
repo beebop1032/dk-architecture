@@ -9,7 +9,7 @@ export function Hero() {
       {/* Photo plein écran */}
       <Image
         src="/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg"
-        alt="Maison contemporaine avec bardage bois et terrasse, réalisation DK Architecture en Brabant wallon"
+        alt="Maison contemporaine avec bardage bois et terrasse, réalisation François Kerremans en Brabant wallon"
         fill
         priority
         quality={65}

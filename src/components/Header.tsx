@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export function Header() {
@@ -27,15 +26,19 @@ export function Header() {
       {/* Nav */}
       <div className="bg-paper/90 backdrop-blur-md border-b border-line relative">
         <div className="max-w-site mx-auto px-6 flex items-center justify-between h-[78px]">
-          <Link href="/" className="flex items-center gap-3" aria-label="DK architecture, accueil">
-            <Image src="/logo-mark.png" alt="" width={40} height={40} className="flex-none" />
-            <span className="flex flex-col leading-none">
-              <span className="font-normal text-[1.32rem] tracking-wide text-brand-grey">
-                <strong className="font-semibold text-accent-dark">DK</strong> architecture
-              </span>
-              <span className="text-[0.6rem] tracking-[0.26em] uppercase text-ink-soft mt-1.5">
-                F. Kerremans <strong className="text-accent-dark">·</strong> Chastre
-              </span>
+          <Link href="/" className="flex flex-col leading-none gap-[5px]" aria-label="François Kerremans, architecte — accueil">
+            <span
+              className="font-normal text-[1.18rem] text-ink"
+              style={{ fontFamily: 'var(--font-cinzel), Georgia, serif', letterSpacing: '0.01em' }}
+            >
+              François Kerremans
+            </span>
+            <div className="h-px bg-line w-full" />
+            <span
+              className="font-light text-[0.57rem] text-brand-grey"
+              style={{ fontFamily: 'var(--font-josefin), sans-serif', letterSpacing: '0.42em' }}
+            >
+              architecte
             </span>
           </Link>
           <nav className={`gap-7 items-center ${open ? 'flex absolute top-[78px] left-0 right-0 flex-col bg-paper px-6 py-5 border-b border-line z-50' : 'hidden md:flex'}`} id="menu">

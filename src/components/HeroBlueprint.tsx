@@ -132,7 +132,7 @@ export function HeroBlueprint() {
       <g className="bp-f bp-f5">
         <rect x="388" y="368" width="132" height="48" stroke="white" strokeWidth="0.7" fill="none" />
         <line x1="388" y1="378" x2="520" y2="378" stroke="white" strokeWidth="0.7" />
-        <text x="454" y="376" fill="white" stroke="none" fontSize="7.5" textAnchor="middle" fontFamily="Josefin Sans, sans-serif" letterSpacing="1.5">DK ARCHITECTURE</text>
+        <text x="454" y="376" fill="white" stroke="none" fontSize="7.5" textAnchor="middle" fontFamily="Josefin Sans, sans-serif" letterSpacing="1.5">F. KERREMANS</text>
         <text x="454" y="392" fill="white" stroke="none" fontSize="8"   textAnchor="middle" fontFamily="Josefin Sans, sans-serif" letterSpacing="1">PLAN RDC</text>
         <text x="454" y="406" fill="white" stroke="none" fontSize="7"   textAnchor="middle" fontFamily="Josefin Sans, sans-serif">ÉCHELLE 1/100</text>
       </g>

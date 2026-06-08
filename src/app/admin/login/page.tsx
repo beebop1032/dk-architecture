@@ -15,7 +15,7 @@ export default async function LoginPage() {
   return (
     <div className="min-h-dvh bg-paper flex items-center justify-center px-4">
       <div className="bg-white border border-line rounded p-8 w-full max-w-sm">
-        <h1 className="text-xl font-semibold mb-6 text-ink">Admin DK Architecture</h1>
+        <h1 className="text-xl font-semibold mb-6 text-ink">Admin</h1>
         <form action={login} className="grid gap-4">
           <div>
             <label htmlFor="pw" className="block text-sm text-ink-soft mb-1.5">Mot de passe</label>

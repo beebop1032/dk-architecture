@@ -20,10 +20,10 @@ const SITE_URL = 'https://www.dkarchitecture.be'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Architecte à Chastre & Gembloux — DK Architecture | Brabant wallon',
+  title: 'Architecte à Chastre & Gembloux — François Kerremans | Brabant wallon',
   description: "Architecte à Chastre et Gembloux — construction neuve, rénovation, extension, permis d'urbanisme en Brabant wallon. François Kerremans. Devis gratuit.",
   keywords: 'architecte Chastre, architecte Gembloux, architecte Brabant wallon, construction neuve Chastre Gembloux, rénovation extension architecte, permis urbanisme Brabant wallon, François Kerremans architecte',
-  authors: [{ name: 'François Kerremans — DK Architecture' }],
+  authors: [{ name: 'François Kerremans' }],
   robots: 'index, follow',
   alternates: {
     canonical: SITE_URL,
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: 'Architecte à Chastre & Gembloux — DK Architecture | Brabant wallon',
+    title: 'Architecte à Chastre & Gembloux — François Kerremans | Brabant wallon',
     description: "Construction neuve, rénovation, extension, permis d'urbanisme à Chastre, Gembloux et Brabant wallon. Devis gratuit.",
     locale: 'fr_BE',
-    siteName: 'DK Architecture',
+    siteName: 'François Kerremans Architecture',
     images: [
       {
         url: '/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg',
         width: 1200,
         height: 630,
-        alt: 'DK Architecture — Maison contemporaine avec bardage bois, réalisation en Brabant wallon',
+        alt: 'François Kerremans — Maison contemporaine avec bardage bois, réalisation en Brabant wallon',
       },
     ],
   },
@@ -56,9 +56,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': ['Architect', 'LocalBusiness'],
-              name: 'DK Architecture',
-              alternateName: 'DK architecture — François Kerremans',
-              description: "Bureau d'architecture à Chastre, Brabant wallon. Construction neuve, rénovation, extension et permis d'urbanisme.",
+              name: 'François Kerremans Architecture',
+              description: "Architecte à Chastre, Brabant wallon. Construction neuve, rénovation, extension et permis d'urbanisme.",
               url: 'https://www.dkarchitecture.be',
               logo: 'https://www.dkarchitecture.be/logo-mark.png',
               image: 'https://www.dkarchitecture.be/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg',
@@ -113,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {
                   '@type': 'Question',
                   name: "Combien coûtent les honoraires d'un architecte en Brabant wallon ?",
-                  acceptedAnswer: { '@type': 'Answer', text: "Les honoraires représentent généralement entre 8 % et 12 % du coût total des travaux pour une mission complète. Le premier rendez-vous chez DK architecture est gratuit et sans engagement." },
+                  acceptedAnswer: { '@type': 'Answer', text: "Les honoraires représentent généralement entre 8 % et 12 % du coût total des travaux pour une mission complète. Le premier rendez-vous est gratuit et sans engagement." },
                 },
                 {
                   '@type': 'Question',
@@ -122,8 +121,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 },
                 {
                   '@type': 'Question',
-                  name: "DK architecture travaille-t-il uniquement à Chastre et Gembloux ?",
-                  acceptedAnswer: { '@type': 'Answer', text: "Non, DK architecture intervient principalement sur l'axe Chastre–Gembloux mais aussi dans l'ensemble du Brabant wallon : Wavre, Ottignies-Louvain-la-Neuve, Perwez, Court-Saint-Étienne et au-delà." },
+                  name: "François Kerremans travaille-t-il uniquement à Chastre et Gembloux ?",
+                  acceptedAnswer: { '@type': 'Answer', text: "Non, François Kerremans intervient principalement sur l'axe Chastre–Gembloux mais aussi dans l'ensemble du Brabant wallon : Wavre, Ottignies-Louvain-la-Neuve, Perwez, Court-Saint-Étienne et au-delà." },
                 },
                 {
                   '@type': 'Question',
