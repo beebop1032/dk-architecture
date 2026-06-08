@@ -1,4 +1,4 @@
-import { put, list } from '@vercel/blob'
+import { put, list, get } from '@vercel/blob'
 
 export interface Submission {
   id: string
@@ -42,13 +42,13 @@ export async function getSubmissions(): Promise<Submission[]> {
   if (blobs.length === 0) return []
   const submissions = await Promise.all(
     blobs.map(async (blob) => {
-      const res = await fetch(blob.url, {
-        headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
-      })
-      return res.json() as Promise<Submission>
+      const result = await get(blob.url, { access: 'private' })
+      if (!result || result.statusCode !== 200) return null
+      const text = await new Response(result.stream).text()
+      return JSON.parse(text) as Submission
     })
   )
-  return submissions.sort(
+  return (submissions.filter(Boolean) as Submission[]).sort(
     (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
   )
 }
