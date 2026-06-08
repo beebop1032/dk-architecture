@@ -5,7 +5,7 @@ export function Contact() {
     { k: 'Adresse', v: 'Chastre (Villeroux-Blanmont), 1450 — Brabant wallon' },
     { k: 'Téléphone', v: '+32 498 34 26 07', href: 'tel:+32498342607' },
     { k: 'Email', v: 'fk@dkarchitecture.be', href: 'mailto:fk@dkarchitecture.be' },
-    { k: 'Zone', v: 'Chastre, Wavre, Gembloux, Ottignies-LLN, Perwez & alentours' },
+    { k: 'Zone', v: 'Chastre, Gembloux et environs — Brabant wallon' },
   ]
 
   return (

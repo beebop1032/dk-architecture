@@ -22,7 +22,7 @@ async function submitContact(_prev: State, formData: FormData): Promise<State> {
   return { success: true }
 }
 
-const inputCls = 'w-full px-3.5 py-3 rounded border border-[#3a3a36] bg-[#26261f] text-white text-sm focus:outline-none focus:border-accent'
+const inputCls = 'w-full px-3.5 py-3 rounded border border-[#3a3a36] bg-[#26261f] text-white text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent'
 
 export function ContactForm() {
   const [state, action, isPending] = useActionState(submitContact, null)
@@ -80,7 +80,7 @@ export function ContactForm() {
         <label htmlFor="msg" className="block text-xs text-[#cfccc4] mb-1.5">Votre projet</label>
         <textarea id="msg" name="msg" rows={4} placeholder="Décrivez votre projet, la localisation, vos délais..." className={`${inputCls} resize-y`} />
       </div>
-      <button type="submit" disabled={isPending} className="bg-accent-dark border border-accent-dark text-white px-7 py-4 rounded font-semibold text-sm hover:bg-accent transition disabled:opacity-60">
+      <button type="submit" disabled={isPending} className="bg-accent-dark border border-accent-dark text-white px-7 py-4 rounded font-semibold text-sm hover:bg-accent transition disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed">
         {isPending ? 'Envoi en cours…' : 'Envoyer ma demande'}
       </button>
       <p className="text-xs text-[#9d9a92]">* champs obligatoires. Vos données restent confidentielles.</p>

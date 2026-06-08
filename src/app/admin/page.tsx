@@ -26,7 +26,7 @@ export default async function AdminPage() {
             )}
           </div>
           <form action={logout}>
-            <button type="submit" className="text-sm text-ink-soft hover:text-ink border border-line px-4 py-2 rounded transition">
+            <button type="submit" className="text-sm text-ink-soft hover:text-ink border border-line px-4 py-2 rounded transition cursor-pointer">
               Déconnexion
             </button>
           </form>
@@ -54,7 +54,7 @@ export default async function AdminPage() {
                   {s.budget && <p><strong>Budget :</strong> {s.budget}</p>}
                   {s.message && <p><strong>Message :</strong><br /><span className="text-ink-soft whitespace-pre-wrap">{s.message}</span></p>}
                   <form action={toggleReadAction.bind(null, s.id, !s.lu)} className="mt-2">
-                    <button type="submit" className="text-xs text-ink-soft hover:text-ink border border-line px-3 py-1.5 rounded transition">
+                    <button type="submit" className="text-xs text-ink-soft hover:text-ink border border-line px-3 py-1.5 rounded transition cursor-pointer">
                       {s.lu ? 'Marquer non lu' : 'Marquer comme lu'}
                     </button>
                   </form>

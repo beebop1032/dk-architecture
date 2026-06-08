@@ -49,8 +49,8 @@ export function Services() {
       <div className="max-w-site mx-auto px-6">
         <div className="max-w-[640px] mb-12">
           <p className="eyebrow">Ce que nous faisons</p>
-          <h2>Des missions complètes, du premier croquis aux clés</h2>
-          <p className="mt-3.5 text-[1.05rem] text-ink-soft">De la conception au suivi de chantier, je prends en charge l&apos;ensemble de votre projet, avec une attention constante aux matériaux durables et au confort de vie.</p>
+          <h2>Architecte à Chastre et Gembloux — missions complètes, du premier croquis aux clés</h2>
+          <p className="mt-3.5 text-[1.05rem] text-ink-soft">De la conception au suivi de chantier, je prends en charge l&apos;ensemble de votre projet en Brabant wallon, avec une attention constante aux matériaux durables et au confort de vie.</p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => (

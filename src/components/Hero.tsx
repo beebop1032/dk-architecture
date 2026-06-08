@@ -6,8 +6,8 @@ export function Hero() {
     <section className="py-[90px] pb-20 overflow-hidden">
       <div className="max-w-site mx-auto px-6 grid grid-cols-1 gap-10 items-center lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <MotionWrapper>
-          <p className="eyebrow">Bureau d&apos;architecture · Chastre, Brabant wallon</p>
-          <h1>Construire ou rénover, avec un architecte qui pense aussi à votre budget.</h1>
+          <p className="eyebrow">Bureau d&apos;architecture · Chastre &amp; Gembloux, Brabant wallon</p>
+          <h1>Architecte à Chastre et Gembloux — construire ou rénover en Brabant wallon, avec un expert qui pense aussi à votre budget.</h1>
           <p className="text-[1.18rem] text-ink-soft mt-5 mb-8 max-w-[46ch]">
             Bureau d&apos;architecture à taille humaine, je conçois des maisons et rénovations contemporaines — volumes nets, lumière et matériaux nobles — avec, quand le projet s&apos;y prête, des solutions durables et biosourcées. Du premier croquis à la remise des clés, en Brabant wallon.
           </p>
@@ -22,7 +22,7 @@ export function Hero() {
         </MotionWrapper>
         <div className="aspect-[4/5] rounded overflow-hidden border border-line relative">
           <Image
-            src="/photos/realisation-bw/480598400_1139028217915102_2980188089996647331_n.jpg"
+            src="/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg"
             alt="Maison contemporaine avec bardage bois et terrasse, réalisation DK architecture en Brabant wallon"
             fill
             className="object-cover"

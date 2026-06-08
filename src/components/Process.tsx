@@ -13,7 +13,7 @@ export function Process() {
       <div className="max-w-site mx-auto px-6">
         <div className="max-w-[640px] mb-12">
           <p className="eyebrow">Notre démarche</p>
-          <h2>Un accompagnement clair, du premier rendez-vous aux clés</h2>
+          <h2>Comment travaille votre architecte en Brabant wallon ?</h2>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (

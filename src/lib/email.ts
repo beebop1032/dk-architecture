@@ -14,7 +14,7 @@ export async function sendContactEmail(data: {
 }): Promise<void> {
   const resend = getResend()
   await resend.emails.send({
-    from: 'DK Architecture <noreply@dkarchitecture.be>',
+    from: 'DK Architecture <noreply@resend.beebopcity.com>',
     to: 'fk@dkarchitecture.be',
     replyTo: data.email,
     subject: `Nouvelle demande de ${data.nom}`,
