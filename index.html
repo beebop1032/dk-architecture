@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DK Architecture — Chastre | Construction & rénovation en Brabant wallon</title>
+<meta name="description" content="DK Architecture, bureau d'architecture de François Kerremans à Chastre. Conception de maisons, rénovations lourdes, extensions, permis d'urbanisme, suivi de chantier et expertise pour particuliers et promoteurs en Brabant wallon. Demandez votre devis gratuit.">
+<meta name="keywords" content="DK Architecture, architecte Chastre, architecte Brabant wallon, François Kerremans, permis d'urbanisme, architecte maison, rénovation Chastre, extension maison, suivi de chantier, expertise immobilière">
+<meta name="robots" content="index, follow">
+<meta name="author" content="DK Architecture — François Kerremans">
+
+<!-- Favicon (marque DK) -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="DK Architecture — Chastre, Brabant wallon">
+<meta property="og:description" content="Construction neuve, rénovation, extension, permis d'urbanisme et expertise. Devis gratuit.">
+<meta property="og:locale" content="fr_BE">
+
+<!-- Schema.org : référencement local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Architect",
+  "name": "DK Architecture",
+  "description": "Bureau d'architecture de François Kerremans à Chastre : construction neuve, rénovation, extension, permis d'urbanisme, suivi de chantier et expertise.",
+  "founder": "François Kerremans",
+  "areaServed": ["Chastre", "Brabant wallon", "Wavre", "Gembloux", "Ottignies-Louvain-la-Neuve", "Perwez"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chastre",
+    "postalCode": "1450",
+    "addressRegion": "Brabant wallon",
+    "addressCountry": "BE"
+  },
+  "telephone": "+32 498 34 26 07",
+  "email": "fk@dkarchitecture.be",
+  "priceRange": "€€",
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
+
+<style>
+  :root{
+    --ink:#262625;
+    --ink-soft:#5a5a58;
+    --paper:#f5f4f2;
+    --paper-2:#ecebe8;
+    --line:#dcdbd7;
+    --accent:#8a2222;      /* bordeaux DK */
+    --accent-dark:#6f1b1b;
+    --brand-grey:#7c7c7c;
+    --white:#ffffff;
+    --max:1180px;
+    --r:4px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-weight:600;letter-spacing:-0.01em;line-height:1.15}
+  h1{font-size:clamp(2.2rem,5vw,4rem)}
+  h2{font-size:clamp(1.6rem,3.2vw,2.6rem)}
+  h3{font-size:1.15rem}
+  p{color:var(--ink-soft)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;
+    color:var(--accent-dark);font-weight:700;margin-bottom:14px;
+  }
+  .btn{
+    display:inline-block;background:var(--ink);color:var(--white);
+    padding:15px 30px;border-radius:var(--r);font-weight:600;font-size:.95rem;
+    transition:.2s;border:1px solid var(--ink);cursor:pointer;
+  }
+  .btn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+  .btn.alt{background:transparent;color:var(--ink)}
+  .btn.alt:hover{background:var(--ink);color:var(--white)}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50}
+  .topbar{background:var(--ink);color:#d6d5d2;font-size:.78rem;letter-spacing:.04em}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .topbar a{color:#d6d5d2;transition:.2s}
+  .topbar a:hover{color:#fff}
+  .topbar .tb-right{display:flex;gap:22px;align-items:center}
+  .topbar .dot{color:var(--accent)}
+  .nav-shell{background:rgba(245,244,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  /* logo lockup */
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo-mark{height:40px;width:auto;flex:none}
+  .brand-text{display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-weight:400;font-size:1.32rem;letter-spacing:.01em;color:var(--brand-grey)}
+  .brand-name b{font-weight:600;color:var(--accent);letter-spacing:.02em}
+  .brand-sub{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+  .brand-sub b{color:var(--accent-dark);font-weight:700}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.92rem;color:var(--ink-soft);transition:.2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links .btn{color:var(--white)}
+  .burger{display:none;font-size:1.6rem;background:none;border:none;cursor:pointer}
+
+  /* HERO */
+  .hero{padding:90px 0 80px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .hero p.lead{font-size:1.18rem;margin:22px 0 34px;max-width:46ch}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-visual{
+    aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;position:relative;
+    border:1px solid var(--line);
+  }
+  .ph{
+    width:100%;height:100%;display:flex;align-items:flex-end;
+    color:#fff;font-size:.8rem;padding:14px;
+    background:
+      linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)),
+      linear-gradient(135deg,#9a9a98,#6f6f6d 60%,#4a4a48);
+  }
+  .ph.v2{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)),linear-gradient(135deg,#a59a9a,#7a6a6a 60%,#544646)}
+  .ph.v3{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)),linear-gradient(135deg,#b0908f,#8a3a3a 60%,#5c1f1f)}
+  .ph.v4{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)),linear-gradient(135deg,#9d9d9b,#727270 60%,#4d4d4b)}
+  .ph.v5{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)),linear-gradient(135deg,#aa9494,#834545 60%,#5a2727)}
+  .ph.v6{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)),linear-gradient(135deg,#9c9c9a,#6c6c6a 60%,#474745)}
+  .hero-visual img,.about-visual img,.proj img{width:100%;height:100%;object-fit:cover;display:block}
+  .cap{position:absolute;left:0;right:0;bottom:0;padding:14px;color:#fff;font-size:.8rem;font-weight:600;line-height:1.3;
+    background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62))}
+  .cap small{display:block;font-weight:400;opacity:.9}
+
+  /* trust bar */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2)}
+  .trust .wrap{display:flex;flex-wrap:wrap;gap:30px 50px;justify-content:space-between;padding-top:26px;padding-bottom:26px}
+  .stat .n{font-size:1.9rem;font-weight:700;color:var(--ink)}
+  .stat .l{font-size:.82rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.12em}
+
+  /* SECTION */
+  section{padding:84px 0}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head p{margin-top:14px;font-size:1.05rem}
+
+  /* SERVICES */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+    padding:30px 28px;transition:.2s;position:relative;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.07)}
+  .card .ico{width:44px;height:44px;border-radius:var(--r);background:var(--paper-2);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--accent-dark)}
+  .card .ico svg{width:24px;height:24px}
+  .card h3{margin-bottom:10px}
+  .card p{font-size:.94rem}
+  .tag{display:inline-block;margin-top:14px;font-size:.72rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.1em;color:var(--accent-dark);
+    background:var(--paper-2);padding:5px 10px;border-radius:99px}
+
+  /* PORTFOLIO */
+  .portfolio{background:var(--paper-2)}
+  .grid-proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .proj{aspect-ratio:1/1;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);position:relative;cursor:pointer}
+  .proj .ph{font-weight:600;line-height:1.3}
+  .proj small{display:block;font-weight:400;opacity:.85}
+  .note{margin-top:22px;font-size:.85rem;color:var(--ink-soft);font-style:italic}
+
+  /* PROCESS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+  .step{padding-top:24px;border-top:2px solid var(--ink)}
+  .step::before{counter-increment:s;content:"0" counter(s);font-weight:700;font-size:1.4rem;color:var(--accent-dark)}
+  .step h3{margin:8px 0 8px}
+  .step p{font-size:.92rem}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .about-visual{aspect-ratio:1/1;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+  .about p{margin-bottom:16px}
+
+  /* TESTIMONIALS */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .quote{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+  .quote p{color:var(--ink);font-size:1rem;margin-bottom:18px}
+  .quote .who{font-size:.85rem;color:var(--ink-soft);font-weight:600}
+  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:14px}
+
+  /* CTA / CONTACT */
+  .contact{background:var(--ink);color:#eee}
+  .contact h2{color:#fff}
+  .contact .eyebrow{color:#c9ad84}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .contact p{color:#c3c0b8}
+  .contact-info li{list-style:none;margin-bottom:18px;display:flex;gap:14px;align-items:flex-start;color:#ddd;font-size:.96rem}
+  .contact-info .k{color:#c9ad84;font-weight:700;min-width:90px}
+  form{display:grid;gap:16px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{font-size:.82rem;color:#cfccc4;display:block;margin-bottom:6px}
+  input,select,textarea{
+    width:100%;padding:13px 14px;border-radius:var(--r);border:1px solid #3a3a36;
+    background:#26261f;color:#fff;font-family:inherit;font-size:.95rem;
+  }
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  textarea{min-height:110px;resize:vertical}
+  .form-note{font-size:.78rem;color:#9d9a92}
+  .ok{display:none;background:#23351f;border:1px solid #3c5a33;color:#cfe8c4;padding:14px;border-radius:var(--r);font-size:.92rem}
+
+  /* FOOTER */
+  footer{background:#15150f;color:#9d9a92;padding:40px 0;font-size:.85rem}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .services,.grid-proj,.quotes{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .nav-links{display:none}
+    .burger{display:block}
+    .nav-links.open{display:flex;position:absolute;top:116px;left:0;right:0;flex-direction:column;
+      background:var(--paper);padding:20px 24px;gap:18px;border-bottom:1px solid var(--line);z-index:60}
+  }
+  @media(max-width:560px){
+    .services,.grid-proj,.quotes,.steps,.row,.trust .wrap{grid-template-columns:1fr}
+    .trust .wrap{justify-items:start}
+    section{padding:60px 0}
+    .topbar .tb-mail{display:none}
+    .topbar{font-size:.72rem}
+    .nav{height:68px}
+    .nav-links.open{top:106px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="tb-left">Bureau d'architecture <span class="dot">·</span> Chastre, Brabant wallon</div>
+      <div class="tb-right">
+        <a href="tel:+32498342607">+32 498 34 26 07</a>
+        <a href="mailto:fk@dkarchitecture.be" class="tb-mail">fk@dkarchitecture.be</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-shell">
+  <div class="wrap nav">
+    <a href="#" class="brand" aria-label="DK architecture, accueil">
+      <img class="logo-mark" src="logo-mark.png" alt="" aria-hidden="true">
+      <span class="brand-text">
+        <span class="brand-name"><b>DK</b> architecture</span>
+        <span class="brand-sub">F. Kerremans <b>·</b> Chastre</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#services">Services</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#demarche">Démarche</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact" class="btn">Demander un devis</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Bureau d'architecture · Chastre, Brabant wallon</p>
+      <h1>Construire ou rénover, avec un architecte qui pense aussi à votre budget.</h1>
+      <p class="lead">Bureau d'architecture à taille humaine, je conçois des maisons et rénovations contemporaines — volumes nets, lumière et matériaux nobles — avec, quand le projet s'y prête, des solutions durables et biosourcées. Du premier croquis à la remise des clés, en Brabant wallon.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Demander un devis gratuit</a>
+        <a href="#realisations" class="btn alt">Voir les réalisations</a>
+      </div>
+    </div>
+    <div class="hero-visual"><img src="photos/realisation-bw/480598400_1139028217915102_2980188089996647331_n.jpg" alt="Maison contemporaine avec bardage bois et terrasse, réalisation DK architecture en Brabant wallon" loading="eager"></div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="wrap">
+    <div class="stat"><div class="n">Brabant wallon</div><div class="l">& alentours</div></div>
+    <div class="stat"><div class="n">Contemporain</div><div class="l">maisons &amp; extensions</div></div>
+    <div class="stat"><div class="n">Biosourcé</div><div class="l">bois, paille, fibre</div></div>
+    <div class="stat"><div class="n">Devis gratuit</div><div class="l">premier rendez-vous</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ce que nous faisons</p>
+      <h2>Des missions complètes, du premier croquis aux clés</h2>
+      <p>De la conception au suivi de chantier, je prends en charge l'ensemble de votre projet, avec une attention constante aux matériaux durables et au confort de vie — sans oublier le conseil et l'expertise qui vous font gagner du temps et de la sérénité.</p>
+    </div>
+    <div class="services">
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+        <h3>Construction neuve</h3>
+        <p>Conception de maisons et bâtiments sur mesure, du concept au permis d'urbanisme jusqu'au suivi de chantier.</p>
+        <span class="tag">Mission complète</span>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 7l3 3M4 20l1-4L16 5l3 3L8 19l-4 1zM13 8l3 3"/></svg></div>
+        <h3>Rénovation & extension</h3>
+        <p>Rénovations, transformations et extensions qui valorisent votre bien — avec des matériaux sains et biosourcés (paille, fibre de bois).</p>
+        <span class="tag">Cœur de métier</span>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a9 9 0 109 9M12 3v9l6 3M12 3a9 9 0 018 5"/></svg></div>
+        <h3>Conseil & expertise</h3>
+        <p>Étude de faisabilité, avis technique, expertise immobilière et accompagnement de promoteurs — facturé au temps passé.</p>
+        <span class="tag">Sur mesure</span>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>Permis & suivi de chantier</h3>
+        <p>Constitution des dossiers de permis d'urbanisme et contrôle de l'exécution jusqu'à la réception des travaux.</p>
+        <span class="tag">Tranquillité</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="realisations" class="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Réalisations</p>
+      <h2>Un aperçu de mes projets</h2>
+      <p>Chaque projet est unique. Voici quelques réalisations représentatives de mon travail en Brabant wallon.</p>
+    </div>
+    <div class="grid-proj">
+      <div class="proj"><img src="photos/realisation-bw/480675020_1139028084581782_5424273550536307218_n.jpg" alt="Extension contemporaine en pierre et bardage bois avec brise-soleil" loading="lazy"><div class="cap">Extension contemporaine<small>Pierre &amp; bardage bois</small></div></div>
+      <div class="proj"><img src="photos/avant-apres/493314466_1186625476488709_3314898866376642430_n.jpg" alt="Rénovation et surélévation d'une maison existante avec lucarne bois" loading="lazy"><div class="cap">Rénovation &amp; surélévation<small>Maison existante</small></div></div>
+      <div class="proj"><img src="photos/elegant-bw/480702352_1140353771115880_2908240527117036417_n.jpg" alt="Extension en bardage bois vertical sur une maison en briques" loading="lazy"><div class="cap">Extension bois<small>Bardage vertical</small></div></div>
+      <div class="proj"><img src="photos/cabane-bomal/480705071_1138208167997107_6044571817886072853_n.jpg" alt="Cabane en bois avec terrasse, à Bomal" loading="lazy"><div class="cap">Cabane en bois<small>Bomal</small></div></div>
+      <div class="proj"><img src="photos/Paille-Tech/552975097_1366809032114394_1525164031828917104_n.jpg" alt="Chantier de construction paille et ossature bois biosourcée" loading="lazy"><div class="cap">Construction paille<small>Ossature bois biosourcée</small></div></div>
+      <div class="proj"><img src="photos/permis-urbanistme-soignies/480850710_1140891247728799_8853314391375652934_n.jpg" alt="Rendu 3D d'un projet de maison contemporaine à Soignies" loading="lazy"><div class="cap">Rendu 3D<small>Projet à Soignies</small></div></div>
+    </div>
+    <p class="note">Quelques réalisations récentes. D'autres projets disponibles sur demande.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="demarche">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Notre démarche</p>
+      <h2>Un accompagnement clair, du premier rendez-vous aux clés</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Rencontre & écoute</h3><p>Premier rendez-vous gratuit pour comprendre votre projet, vos envies et votre budget.</p></div>
+      <div class="step"><h3>Conception</h3><p>Esquisses, plans et estimation budgétaire. On affine ensemble jusqu'au projet idéal.</p></div>
+      <div class="step"><h3>Permis & dossier</h3><p>Constitution du dossier de permis d'urbanisme et des missions techniques nécessaires.</p></div>
+      <div class="step"><h3>Chantier & réception</h3><p>Suivi des travaux, coordination des entreprises et réception finale.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="apropos" class="portfolio">
+  <div class="wrap about-grid about">
+    <div class="about-visual"><img src="photos/realisation-bw/480812628_1139028191248438_2690905198993266196_n.jpg" alt="Maison contemporaine avec extension bois et soubassement en pierre, réalisation DK architecture"></div>
+    <div>
+      <p class="eyebrow">À propos</p>
+      <h2>DK architecture</h2>
+      <p>Installé à Chastre (Villeroux-Blanmont), au cœur du Brabant wallon, le bureau DK architecture est dirigé par l'architecte François Kerremans. Un bureau à taille humaine, qui accompagne particuliers et indépendants dans leurs projets de construction et de rénovation.</p>
+      <p>Ma conviction : une architecture contemporaine qui vous ressemble — des volumes nets, beaucoup de lumière et des matériaux nobles comme le bois. J'aime aussi explorer les solutions durables et biosourcées (construction paille, fibre de bois) quand le projet s'y prête, pour des espaces sains et sobres en énergie.</p>
+      <p>Proximité, écoute et transparence à chaque étape : un bon projet est un projet qui tient dans votre budget, respecte les délais et améliore réellement votre quotidien. Architecte inscrit à l'Ordre des Architectes.</p>
+      <a href="#contact" class="btn" style="margin-top:10px">Discutons de votre projet</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ils nous ont fait confiance</p>
+      <h2>Ce que disent nos clients</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote"><div class="stars">★★★★★</div><p>"Un accompagnement du début à la fin. Notre rénovation est restée dans le budget et le résultat dépasse nos attentes."</p><div class="who">— Famille D., Chastre</div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Réactif et de bon conseil à chaque étape. Le dossier de permis a été géré sans le moindre stress de notre côté."</p><div class="who">— Marc V., Gembloux</div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Pour notre petit immeuble de logements, un partenaire fiable et carré sur les délais. On retravaillera ensemble."</p><div class="who">— SPRL Habitat, Ottignies</div></div>
+    </div>
+    <p class="note">Témoignages de démonstration — à remplacer par de vrais avis clients.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Demander un devis</p>
+      <h2>Parlons de votre projet</h2>
+      <p style="margin:18px 0 30px">Le premier rendez-vous est gratuit et sans engagement. Décrivez-nous votre projet, nous revenons vers vous sous 48&nbsp;h.</p>
+      <ul class="contact-info">
+        <li><span class="k">Adresse</span><span>Chastre (Villeroux-Blanmont), 1450 — Brabant wallon</span></li>
+        <li><span class="k">Téléphone</span><span><a href="tel:+32498342607" style="color:inherit">+32 498 34 26 07</a></span></li>
+        <li><span class="k">Email</span><span><a href="mailto:fk@dkarchitecture.be" style="color:inherit">fk@dkarchitecture.be</a></span></li>
+        <li><span class="k">Zone</span><span>Chastre, Wavre, Gembloux, Ottignies-LLN, Perwez & alentours</span></li>
+      </ul>
+    </div>
+    <div>
+      <form id="quoteForm" onsubmit="return submitForm(event)">
+        <div class="row">
+          <div><label for="nom">Nom *</label><input id="nom" name="nom" required></div>
+          <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel"></div>
+        </div>
+        <div><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
+        <div class="row">
+          <div>
+            <label for="type">Type de projet</label>
+            <select id="type" name="type">
+              <option>Construction neuve</option>
+              <option>Rénovation / extension</option>
+              <option>Permis d'urbanisme / suivi de chantier</option>
+              <option>Conseil / expertise</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="budget">Budget estimé</label>
+            <select id="budget" name="budget">
+              <option>À définir</option>
+              <option>&lt; 100 000 €</option>
+              <option>100 000 – 250 000 €</option>
+              <option>250 000 – 500 000 €</option>
+              <option>&gt; 500 000 €</option>
+            </select>
+          </div>
+        </div>
+        <div><label for="msg">Votre projet</label><textarea id="msg" name="msg" placeholder="Décrivez votre projet, la localisation, vos délais..."></textarea></div>
+        <button class="btn" type="submit" style="background:var(--accent-dark);border-color:var(--accent-dark)">Envoyer ma demande</button>
+        <p class="form-note">* champs obligatoires. Vos données restent confidentielles et ne servent qu'à vous recontacter.</p>
+        <div class="ok" id="okMsg">Merci ! Votre demande a bien été prise en compte (démo). Pour la mettre en ligne, connectez ce formulaire à une adresse email ou un service comme Formspree.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr"></span> DK Architecture — François Kerremans · Chastre, Brabant wallon</div>
+    <div>Architecte inscrit à l'Ordre des Architectes</div>
+  </div>
+</footer>
+
+<script>
+  // année
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // menu mobile
+  document.getElementById('burger').addEventListener('click',function(){
+    document.getElementById('menu').classList.toggle('open');
+  });
+  document.querySelectorAll('#menu a').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open')});
+  });
+  // formulaire (démo)
+  function submitForm(e){
+    e.preventDefault();
+    document.getElementById('okMsg').style.display='block';
+    document.getElementById('quoteForm').reset();
+    document.getElementById('okMsg').scrollIntoView({behavior:'smooth',block:'center'});
+    return false;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" width="260" height="150" role="img" aria-label="DK architecture">
+  <!-- Marque : K géométrique en triangles -->
+  <g transform="translate(80,10)">
+    <polygon points="0,0 0,64 37,32" fill="#7c7c7c"/>
+    <polygon points="44,0 54.5,0 40,30" fill="#872121"/>
+    <polygon points="55.5,0 66,0 41,30" fill="#7c7c7c"/>
+    <polygon points="41,34 52,64 100,64" fill="#7c7c7c"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="130" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" letter-spacing="1">
+    <tspan font-weight="600" fill="#872121">DK</tspan><tspan font-weight="400" fill="#6f6f6f"> architecture</tspan>
+  </text>
+</svg>
