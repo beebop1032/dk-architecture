@@ -12,8 +12,9 @@ export function Hero() {
         alt="Maison contemporaine avec bardage bois et terrasse, réalisation DK Architecture en Brabant wallon"
         fill
         priority
+        quality={65}
         className="object-cover object-[center_45%]"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
       />
 
       {/* Voile général léger */}
