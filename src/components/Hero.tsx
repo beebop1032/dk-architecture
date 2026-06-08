@@ -3,33 +3,67 @@ import { MotionWrapper } from './MotionWrapper'
 
 export function Hero() {
   return (
-    <section className="py-[90px] pb-20 overflow-hidden">
-      <div className="max-w-site mx-auto px-6 grid grid-cols-1 gap-10 items-center lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+    <section className="relative min-h-dvh flex flex-col justify-end overflow-hidden">
+      <Image
+        src="/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg"
+        alt="Maison contemporaine avec bardage bois et terrasse, réalisation DK Architecture en Brabant wallon"
+        fill
+        priority
+        className="object-cover object-[center_45%]"
+        sizes="100vw"
+      />
+
+      {/* Gradient overlay — transparent at top, deep at bottom for text legibility */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to top, rgba(14,14,11,0.92) 0%, rgba(14,14,11,0.55) 45%, rgba(14,14,11,0.18) 75%, rgba(14,14,11,0.08) 100%)',
+        }}
+      />
+
+      {/* Content anchored to bottom */}
+      <div className="relative z-10 w-full max-w-site mx-auto px-6 pb-24 pt-40">
         <MotionWrapper>
-          <p className="eyebrow">Bureau d&apos;architecture · Chastre &amp; Gembloux, Brabant wallon</p>
-          <h1>Architecte à Chastre et Gembloux — construire ou rénover en Brabant wallon, avec un expert qui pense aussi à votre budget.</h1>
-          <p className="text-[1.18rem] text-ink-soft mt-5 mb-8 max-w-[46ch]">
-            Bureau d&apos;architecture à taille humaine, je conçois des maisons et rénovations contemporaines — volumes nets, lumière et matériaux nobles — avec, quand le projet s&apos;y prête, des solutions durables et biosourcées. Du premier croquis à la remise des clés, en Brabant wallon.
+          <p
+            className="text-[0.72rem] font-bold uppercase tracking-[0.22em] mb-5"
+            style={{ color: '#c9ad84' }}
+          >
+            Bureau d&apos;architecture · Chastre &amp; Gembloux, Brabant wallon
           </p>
-          <div className="flex gap-3.5 flex-wrap">
-            <a href="#contact" className="bg-ink text-white px-7 py-[15px] rounded text-[0.95rem] font-semibold hover:bg-accent-dark transition border border-ink">
+          <h1
+            className="text-white max-w-[18ch] mb-5 leading-[1.1]"
+            style={{ fontSize: 'clamp(2.6rem, 5.2vw, 4.4rem)' }}
+          >
+            Architecte à Chastre et Gembloux — construire ou rénover en Brabant wallon
+          </h1>
+          <p className="text-white/70 max-w-[52ch] mb-8 leading-relaxed" style={{ fontSize: '1.05rem' }}>
+            Bureau à taille humaine · constructions neuves, rénovations et extensions contemporaines,
+            avec des solutions durables et biosourcées quand le projet s&apos;y prête.
+          </p>
+          <div className="flex gap-4 flex-wrap">
+            <a
+              href="#contact"
+              className="bg-accent-dark text-white px-8 py-4 rounded font-semibold text-[0.95rem] hover:bg-accent transition border border-accent-dark cursor-pointer"
+            >
               Demander un devis gratuit
             </a>
-            <a href="#realisations" className="bg-transparent text-ink px-7 py-[15px] rounded text-[0.95rem] font-semibold hover:bg-ink hover:text-white transition border border-ink">
+            <a
+              href="#realisations"
+              className="text-white px-8 py-4 rounded font-semibold text-[0.95rem] hover:bg-white/10 transition border border-white/40 cursor-pointer"
+            >
               Voir les réalisations
             </a>
           </div>
         </MotionWrapper>
-        <div className="aspect-[4/5] rounded overflow-hidden border border-line relative">
-          <Image
-            src="/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg"
-            alt="Maison contemporaine avec bardage bois et terrasse, réalisation DK architecture en Brabant wallon"
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 900px) 100vw, 45vw"
-          />
-        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 pointer-events-none" style={{ opacity: 0.55 }}>
+        <span className="text-white text-[0.62rem] uppercase tracking-[0.2em] font-bold">Découvrir</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </div>
     </section>
   )
