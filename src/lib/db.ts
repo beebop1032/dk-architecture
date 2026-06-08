@@ -33,11 +33,12 @@ export async function saveSubmission(data: {
   await put(`submissions/${id}.json`, JSON.stringify(submission), {
     access: 'public',
     contentType: 'application/json',
+    storeId: process.env.BLOB_STORE_ID,
   })
 }
 
 export async function getSubmissions(): Promise<Submission[]> {
-  const { blobs } = await list({ prefix: 'submissions/' })
+  const { blobs } = await list({ prefix: 'submissions/', storeId: process.env.BLOB_STORE_ID })
   if (blobs.length === 0) return []
   const submissions = await Promise.all(
     blobs.map(async (blob) => {
