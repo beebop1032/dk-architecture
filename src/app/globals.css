@@ -38,3 +38,13 @@ h3 { font-size: 1.1rem; letter-spacing: 0.02em; }
   font-weight: 700;
   margin-bottom: 14px;
 }
+
+.motion-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.motion-hidden.motion-revealed {
+  opacity: 1;
+  transform: none;
+}

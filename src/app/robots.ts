@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin/', '/api/'],
     },
-    sitemap: 'https://www.dkarchitecture.be/sitemap.xml',
+    sitemap: 'https://www.kerremans-architecte.be/sitemap.xml',
   }
 }

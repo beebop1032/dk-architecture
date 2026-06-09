@@ -1,12 +1,6 @@
 'use client'
 
-import { useEffect, useState, ReactNode } from 'react'
-import dynamic from 'next/dynamic'
-
-const MotionDiv = dynamic(
-  () => import('framer-motion').then(m => ({ default: m.motion.div })),
-  { ssr: false }
-)
+import { useEffect, useRef, ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
@@ -15,23 +9,32 @@ interface Props {
 }
 
 export function MotionWrapper({ children, className, delay = 0 }: Props) {
-  const [animate, setAnimate] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setAnimate(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)
-  }, [])
+    const el = ref.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-  if (!animate) return <div className={className}>{children}</div>
+    // Skip animation for content already visible (above the fold) — avoids LCP flash
+    const rect = el.getBoundingClientRect()
+    if (rect.top < window.innerHeight) return
 
-  return (
-    <MotionDiv
-      className={className}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: 'easeOut', delay }}
-    >
-      {children}
-    </MotionDiv>
-  )
+    if (delay > 0) el.style.transitionDelay = `${delay}s`
+    el.classList.add('motion-hidden')
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('motion-revealed')
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [delay])
+
+  return <div ref={ref} className={className}>{children}</div>
 }

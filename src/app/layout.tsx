@@ -7,17 +7,17 @@ const cinzel = Cinzel({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-cinzel',
-  weight: ['400', '500', '600', '700'],
+  weight: ['600', '700'],
 })
 
 const josefinSans = Josefin_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-josefin',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '600', '700'],
 })
 
-const SITE_URL = 'https://www.dkarchitecture.be'
+const SITE_URL = 'https://www.kerremans-architecte.be'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -61,9 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': ['Architect', 'LocalBusiness'],
               name: 'François Kerremans Architecture',
               description: "Architecte à Chastre, Brabant wallon. Construction neuve, rénovation, extension et permis d'urbanisme.",
-              url: 'https://www.dkarchitecture.be',
-              logo: 'https://www.dkarchitecture.be/logo-mark.png',
-              image: 'https://www.dkarchitecture.be/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg',
+              url: 'https://www.kerremans-architecte.be',
+              logo: 'https://www.kerremans-architecte.be/logo-mark.png',
+              image: 'https://www.kerremans-architecte.be/photos/realisation-bw/maison-contemporaine-bardage-bois-terrasse-brabant-wallon.jpg',
               founder: { '@type': 'Person', name: 'François Kerremans', jobTitle: 'Architecte' },
               employee: { '@type': 'Person', name: 'François Kerremans', jobTitle: 'Architecte agréé Ordre des Architectes de Belgique' },
               address: {
